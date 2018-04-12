@@ -22,4 +22,6 @@ Time:        2.634s, estimated 3s
 Ran all test suites.
 ```
 
-https://github.com/wmonk/create-react-app-typescript/issues/282
+In case of [npm error: --watch is not supported without git/hg, please use --watchAll](https://github.com/wmonk/create-react-app-typescript/issues/282), see this github issue.
+
+## 
