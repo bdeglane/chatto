@@ -1,0 +1,23 @@
+.message {
+    text-align: left;
+
+    border: 1px solid silver;
+    margin: 0 1em 0 0;
+    padding: 0.65em 1em;
+    height: auto;
+
+    background: white;
+}
+
+/*.row .col .message + .row .col .message.mine {*/
+    /*margin: 1em 0 0 1em;*/
+/*}*/
+
+/*.row .col .message.mine + .row .col .message {*/
+    /*margin: 1em 1em 0 0;*/
+/*}*/
+
+.message.mine {
+    text-align: right;
+    margin: 0 0 0 1em;
+}
