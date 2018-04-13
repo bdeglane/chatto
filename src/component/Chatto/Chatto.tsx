@@ -69,6 +69,8 @@ export class Chatto extends React.Component<ChattoProps, IChattoState> {
                         <ChattoInput onAddMessage={this.onAddMessage}/>
                     </Col>
                 </Row>
+                {/* call a chatto window with hoc */}
+                {/*<Row><Col>{user.id === 1 ? <ChattoWindowUserWithHOC messages={messages}/> : <p>Nothing</p>}</Col></Row>*/}
             </Container>
         );
     }

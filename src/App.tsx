@@ -10,9 +10,9 @@ import {
 } from 'reactstrap';
 import {
     UserProvider,
-    UserContext
+    UserContext,
+    IUserProviderState
 } from './context/user/User.context';
-import { IChattoUser } from './model/user';
 
 class App extends React.Component {
 
@@ -31,7 +31,19 @@ class App extends React.Component {
                                   * */}
                                 <UserProvider>
                                     <UserContext.Consumer>
-                                        {(user: IChattoUser) => <ChattoConnected user={user}/>}
+                                        {({user, toggleUser}: IUserProviderState) => (
+                                            // react fragment
+                                            <>
+                                                < ChattoConnected user={user}/>
+                                                {/*
+                                                  * Use to toggle user from the context
+                                                  * provide by <UserProvider/>
+                                                  * */}
+                                                {/*<Button onClick={toggleUser}>
+                                                    ToggleUser from parent component
+                                                </Button>*/}
+                                            </>
+                                        )}
                                     </UserContext.Consumer>
                                 </UserProvider>
                             </Col>
