@@ -1,8 +1,9 @@
 .messages {
-    height: 25em;
+    height: 20em;
+
     overflow-y: scroll;
     overflow-x: hidden;
-    background: grey;
+    background: none;
 
     display: flex;
     flex-direction: column;
