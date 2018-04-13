@@ -70,7 +70,7 @@ export class Chatto extends React.Component<ChattoProps, IChattoState> {
                     </Col>
                 </Row>
                 {/* call a chatto window with hoc */}
-                {/*<Row><Col>{user.id === 1 ? <ChattoWindowUserWithHOC messages={messages}/> : <p>Nothing</p>}</Col></Row>*/}
+                {/*<Row><Col>{user.id === 1 ? <ChattoWindowUserWithHOC messages={messages}/> : <p>Nothing provide</p>}</Col></Row>*/}
             </Container>
         );
     }
