@@ -9,15 +9,16 @@
     background: white;
 }
 
-/*.row .col .message + .row .col .message.mine {*/
-    /*margin: 1em 0 0 1em;*/
-/*}*/
-
-/*.row .col .message.mine + .row .col .message {*/
-    /*margin: 1em 1em 0 0;*/
-/*}*/
-
 .message.mine {
     text-align: right;
     margin: 0 0 0 1em;
+}
+
+.example-appear {
+    opacity: 0.01;
+}
+
+.example-appear.example-appear-active {
+    opacity: 1;
+    transition: opacity .25s ease-in;
 }
