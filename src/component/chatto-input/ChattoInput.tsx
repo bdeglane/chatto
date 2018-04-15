@@ -67,7 +67,8 @@ export class ChattoInput extends React.Component<IChattoInputProps, IChattoInput
                 <FormGroup>
                     <InputGroup>
                         <Input value={this.state.message}
-                               onChange={this.handleChange}/>
+                               onChange={this.handleChange}
+                               placeholder='Type message...'/>
                         <InputGroupAddon addonType="prepend">
                             <Button type='submit'>Send</Button>
                         </InputGroupAddon>
