@@ -8,6 +8,8 @@ import {
     InputGroupAddon
 } from 'reactstrap';
 
+import './ChattoInput.css';
+
 export interface IChattoInputProps {
     onAddMessage: (message: string) => any;
 }
@@ -60,7 +62,8 @@ export class ChattoInput extends React.Component<IChattoInputProps, IChattoInput
     render() {
         //tslint:disable
         return (
-            <Form onSubmit={this.handleSubmit}>
+            <Form onSubmit={this.handleSubmit}
+                  className='chatto-input'>
                 <FormGroup>
                     <InputGroup>
                         <Input value={this.state.message}
