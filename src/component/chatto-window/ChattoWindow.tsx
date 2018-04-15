@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { IChattoMessage } from '../../model/message';
 import { ChattoMessage } from '../chatto-message/ChattoMessage';
+import Scrollbars from 'react-custom-scrollbars';
 import './ChattoWindow.css';
 
 export interface IChatWindowProps {
@@ -17,6 +18,7 @@ export interface IChatWindowProps {
 export class ChattoWindow extends React.Component<IChatWindowProps> {
 
     public el: HTMLDivElement;
+    public scrollBar: Scrollbars;
 
     componentDidMount() {
         this.scrollToBottom();
@@ -27,7 +29,7 @@ export class ChattoWindow extends React.Component<IChatWindowProps> {
     }
 
     scrollToBottom() {
-        this.el.scrollTop = this.el.scrollHeight;
+        this.scrollBar.scrollToBottom();
     }
 
     render() {
@@ -40,10 +42,12 @@ export class ChattoWindow extends React.Component<IChatWindowProps> {
         return (
             <div className="messages"
                  ref={(el: HTMLDivElement) => this.el = el}>
-                {messages.map((message: IChattoMessage, id: number) =>
-                    <ChattoMessage key={id}
-                                   message={message}
-                                   mine={message.user.id === userId}/>)}
+                <Scrollbars ref={(sc: any) => this.scrollBar = sc}>
+                    {messages.map((message: IChattoMessage, id: number) =>
+                        <ChattoMessage key={id}
+                                       message={message}
+                                       mine={message.user.id === userId}/>)}
+                </Scrollbars>
             </div>);
     }
 }
