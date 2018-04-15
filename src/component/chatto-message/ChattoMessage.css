@@ -1,4 +1,4 @@
-.message {
+.message .text {
     text-align: left;
 
     margin: 0 2em 0.5em 0.5em;
@@ -7,13 +7,34 @@
 
     background: white;
 
-    border-radius: 0.75em;
-    box-shadow: 0.05em 0.1em 0.25em 0.1em #00000014;
+    border-radius: 0.75em 0.75em 0.75em 0;
+
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, .35);
+    color: white;
+}
+
+.message {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 .message.mine {
+    justify-content: flex-end;
+}
+
+.message .user {
+}
+
+.message .text {
+}
+
+.message.mine .text {
     text-align: right;
-    margin: 0 0.5em 0.5em 2em;
+    margin: 0 0.5em 0.5em 4em;
+    border-radius: 0.75em 0.75em 0 0.75em;
+    background: linear-gradient(to right, #ff5eb1 0%, #ff0084 100%);
 }
 
 .example-appear {
