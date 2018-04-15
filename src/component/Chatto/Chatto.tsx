@@ -14,6 +14,9 @@ import {
 import { ChattoWindow } from '../chatto-window/ChattoWindow';
 import { ChattoWindowUser } from '../../context/user/User.context';
 
+import './Chatto.css';
+import { ChattoPic } from '../chatto-pic/ChattoPic';
+
 // add all 3 props type
 type ChattoProps = IStateProps & IDispatchProps & IOwnProps;
 
@@ -51,6 +54,12 @@ export class Chatto extends React.Component<ChattoProps, IChattoState> {
         //tslint:disable
         return (
             <Container className="chatto">
+                <Row className='chatto-header'>
+                    <Col>
+                        <ChattoPic src={user.pic}
+                                   alt={`${user.name} profile picture`}/>
+                    </Col>
+                </Row>
                 <Row>
                     <Col>
                         {/*
@@ -64,7 +73,7 @@ export class Chatto extends React.Component<ChattoProps, IChattoState> {
                             : <ChattoWindow messages={messages} userId={user.id}/>}
                     </Col>
                 </Row>
-                <Row>
+                <Row className='chatto-footer'>
                     <Col>
                         <ChattoInput onAddMessage={this.onAddMessage}/>
                     </Col>
