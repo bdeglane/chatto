@@ -40,7 +40,7 @@ export class ChattoWindow extends React.Component<IChatWindowProps> {
 
         //tslint:disable
         return (
-            <div className="messages"
+            <div className='messages'
                  ref={(el: HTMLDivElement) => this.el = el}>
                 <Scrollbars ref={(sc: any) => this.scrollBar = sc}>
                     {messages.map((message: IChattoMessage, id: number) =>

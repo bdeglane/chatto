@@ -30,13 +30,12 @@ describe('ChattoInput', () => {
 
     it('should render 2 messages', () => {
         const wrapper = mount(<ChattoWindow messages={props.messages} userId={props.userId}/>);
-        const messages = wrapper.find('.messages');
+        const messagesWrapper = wrapper.find('.messages');
+        const messages = messagesWrapper.children().children().children().get(0);
         // must have to node
-        assert.equal(messages.children().length, 2);
+        assert.equal(messages.props.children.length, 2);
         // test each child
-        const props1 = messages.children().get(0).props;
-        const props2 = messages.children().get(1).props;
-        assert.deepEqual(props1.message, (props as any).messages[0]);
-        assert.deepEqual(props2.message, (props as any).messages[1]);
+        assert.deepEqual(messages.props.children[0].props.message, (props as any).messages[0]);
+        assert.deepEqual(messages.props.children[1].props.message, (props as any).messages[1]);
     });
 });
