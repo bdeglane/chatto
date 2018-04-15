@@ -12,7 +12,8 @@ describe('ChattoInput', () => {
     const dummyMessage: IChattoMessage = {
         user: {
             id: 1,
-            name: 'toto'
+            name: 'toto',
+            pic: ''
         },
         text: 'test',
         date: new Date()
