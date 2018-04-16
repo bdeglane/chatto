@@ -13,9 +13,9 @@ import {
 } from './index';
 import { ChattoWindow } from '../chatto-window/ChattoWindow';
 import { ChattoWindowUser } from '../../context/user/User.context';
+import { ChattoPic } from '../chatto-pic/ChattoPic';
 
 import './Chatto.css';
-import { ChattoPic } from '../chatto-pic/ChattoPic';
 
 // add all 3 props type
 type ChattoProps = IStateProps & IDispatchProps & IOwnProps;
