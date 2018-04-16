@@ -42,7 +42,13 @@ export class ChattoWindow extends React.Component<IChatWindowProps> {
         return (
             <div className='messages'
                  ref={(el: HTMLDivElement) => this.el = el}>
-                <Scrollbars ref={(sc: any) => this.scrollBar = sc}>
+                <Scrollbars ref={(sc: any) => this.scrollBar = sc}
+                            // This will activate auto hide
+                            autoHide
+                            // Hide delay in ms
+                            autoHideTimeout={1000}
+                            // Duration for hide animation in ms.
+                            autoHideDuration={200}>
                     {messages.map((message: IChattoMessage, id: number) =>
                         <ChattoMessage key={id}
                                        message={message}
