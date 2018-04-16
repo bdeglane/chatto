@@ -26,4 +26,5 @@
 
 .chatto .row:nth-child(2) .col {
     padding-right: 7px;
+    height: 20em;
 }
